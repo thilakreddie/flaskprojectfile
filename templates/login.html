@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel = "stylesheet" href="{{ url_for('static', filename='styles/services-css.css') }}">
+<style>
+
+
+</style>
+<script>
+  function vdate(){
+var rs=document.forms["myform"]["uname"].value;
+var ps=document.forms["myform"]["psw"].value;
+// alert(rs);
+if(rs=="")
+{
+  alert("Username should not be void");
+  return false;
+}
+if(ps=="")
+{
+  alert("Password should not be void");
+  return false;
+}
+if(ps.length<8)
+{
+  alert("Password should be minimum of length 8");
+  return false;
+}}
+</script>
+</head>
+<body>
+  <div class="header">
+    <a href="/" class="logo"><img src="{{ url_for('static', filename='img/logo.jpeg') }}" width="180px" height="50px"></a>
+  <div class="header-right">
+    <a  href="/">Home</a>
+    <a href="/services">Our Services</a>
+    <a  href="/about">About us</a>
+    <a class="active" href="/about"> Get Started</a>
+  </div>
+  
+</div> 
+<div class="about-section">
+    <h1>Login Page</h1><br>
+    <form name="myform" action="{{ url_for('login')}}" method="post">
+      <!-- <div class="imgcontainer">
+        <img src="login.png" alt="login" class="login">
+      </div> -->
+      <div class="container">
+        <div id="login-errors">{{login_errors}}</div>
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+  
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+  
+        <button type="submit">Login</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+      </div>
+      <div class="container" style="background-color:#f1f1f1">
+        <a href="/registration" ><button type="button" class="register">Register Here</button></a>
+        <span class="psw">Forgot your password click <a href="#">here</a></span>
+      </div>
+    </form>
+
+<!-- <div class="column">
+  <div class="card">
+    <img src="/w3images/team2.jpg" alt="Mike" style="width:100%">
+    <div class="container">
+      <h2>Mike Ross</h2>
+      <p class="title">Art Director</p>
+      <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+      <p>mike@example.com</p>
+      <p><button class="button">Contact</button></p>
+    </div>
+  </div>
+</div>
+
+<div class="column">
+  <div class="card">
+    <img src="/w3images/team3.jpg" alt="John" style="width:100%">
+    <div class="container">
+      <h2>John Doe</h2>
+      <p class="title">Designer</p>
+      <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+      <p>john@example.com</p>
+      <p><button class="button">Contact</button></p>
+    </div>
+  </div>
+</div> -->
+</div> 
+</div>
+<footer>
+  <div style="width:100%;height:200px">
+    <div class="foot">
+      <div>
+        <p>&copy; Smart Study</p>
+      </div>
+      <div>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Use</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>

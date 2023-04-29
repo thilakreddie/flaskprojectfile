@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<link rel = "stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+<link rel = "stylesheet" href="{{ url_for('static', filename='styles/cardstyle.css') }}">
+<style>
+    .header{
+        background-color: blue;
+        
+    }
+</style>
+<body>
+    <!-- <div class="header">
+        <a href="indexx.html" class="logo"><img src="logo.jpeg" width="180px" height="50px"></a>
+      <div class="header-right">
+        <a class="active" href="indexx.html">Home</a>
+        <a href="services.html">Our Services</a>
+        <a href="about.html">About us</a>
+        <a href="registration.html"> Get Started</a>
+    
+      </div>
+      
+    </div>  -->
+    <header><a href="/">Home</a></header>
+    
+<canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+<script>
+var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
+var yValues = [55, 49, 44, 24, 15];
+var barColors = [
+  "#b91d47",
+  "#00aba9",
+  "#2b5797",
+  "#e8c3b9",
+  "#1e7145"
+];
+
+new Chart("myChart", {
+  type: "pie",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    title: {
+      display: true,
+      text: "World Wide Wine Production 2018"
+    }
+  }
+});
+</script>
+
+</body>
+</html>

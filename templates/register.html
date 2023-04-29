@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/services-css.css') }}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <style>
+
+
+  </style>
+
+</head>
+
+<body>
+  <div class="header">
+    <a href="/" class="logo"><img src="{{ url_for('static', filename='img/logo.jpeg') }}" width="180px"
+        height="50px"></a>
+    <div class="header-right">
+      <a href="/">Home</a>
+      <a href="/services">Our Services</a>
+      <a href="/about">About us</a>
+      <a class="active" href="/registration"> Get Started</a>
+    </div>
+
+  </div>
+  <div class="about-section">
+    <h1>Register Page</h1><br>
+    <form name="myform" action="{{ url_for('registration')}}" method="post">
+
+      <div class="container">
+        <div id="registration-errors">{{registration_errors}}</div>
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" id="uname" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+
+        <label for="cpsw"><b>Confirm Password</b></label>
+        <input type="password" placeholder="Enter Password" name="cpsw" id="cpsw" required>
+
+        <button type="submit">Signup</button>
+        <!-- <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label> -->
+      </div>
+      <div class="container" style="background-color:#f1f1f1">
+        <a href="/login">
+          <button type="button" class="register">Existing Cutomer ? Login Here</button></a>
+      </div>
+    </form>
+
+
+  </div>
+  </div>
+  <footer>
+    <div style="width:100%;height:200px">
+      <div class="foot">
+        <div>
+          <p>&copy; Smart Study</p>
+        </div>
+        <div>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+</body>

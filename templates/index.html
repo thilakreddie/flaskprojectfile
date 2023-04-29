@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel = "stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+<link rel = "stylesheet" href="{{ url_for('static', filename='styles/cardstyle.css') }}">
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<style>
+  .header {
+    background-image: linear-gradient(rgba(194, 200, 223, 0.7),rgba(194, 200, 223, 0.7)),url("{{ url_for('static', filename='img/edu1.jpg') }}");
+  }
+</style>
+</head>
+<body>
+  <div class="header">
+    <a href="/" class="logo"><img src="{{ url_for('static', filename='img/logo.jpeg') }}" width="180px" height="50px"></a>
+  <div class="header-right">
+    <a class="active" href="/">Home</a>
+    <a href="/services">Our Services</a>
+    <a href="/about">About us</a>
+    <a href="/registration"> Get Started</a>
+
+  </div>
+  
+</div> 
+
+
+<br>
+<br>
+<div class=" text-box">
+    <h1>Online Learning</h1><br>
+    <p>Best learning experience at your finger tips</p>
+    <a href = "/services" class = "btn">Demo</a>
+</div>
+
+<section class="articles">
+  <article>
+    <div class="article-wrapper">
+      <figure>
+        <img src="{{ url_for('static', filename='img/ok.jpg') }}" alt="" />
+      </figure>
+      <div class="article-body">
+        <h2>Jermey Clarkson</h2>
+        <p>
+          Smart Study is good website to learn and grow. They offer a great variety of courses. Overall, website provides a valuable resource for people looking to learn new skills or improve their knowledge on a variety of topics. Keep up the good work!
+        </p>
+        
+        </a>
+      </div>
+    </div>
+  </article>
+  <article>
+
+    <div class="article-wrapper">
+      <figure>
+        <img src="{{ url_for('static', filename='img/ln4.jpg') }}" alt="" />
+      </figure>
+      <div class="article-body">
+        <h2>Lando Norris</h2>
+        <p>
+          The website is easy to follow and understand with Clarity and ease of understanding.The instructions are clear and concise, and the overall site is user-friendly.
+          The website provides valuable insights and knowledge.
+                  </p>
+        
+      </div>
+    </div>
+  </article>
+  <article>
+
+    <div class="article-wrapper">
+      <figure>
+        <img src="{{ url_for('static', filename='img/people.jpg') }}" alt="" />
+      </figure>
+      <div class="article-body">
+        <h2>Kelly Piquet</h2>
+        <p>
+          Firstly, the overall design of website looks clean and professional. The color scheme is visually appealing, and the layout is easy to navigate. The use of clear headings and categories makes it easy for users to find the tutorial they are looking for.        </p>
+        
+      </div>
+    </div>
+  </article>
+</section>
+<!-- <a>bdcgshgxb shgf</a> -->
+<div id="cd" style="background-color:bisque ; text-align:-webkit-center" >
+<h2>Why Us??</h2>
+<div class="chartview">
+<canvas id="myChart" style="width:100%;max-width:500px;margin-left:0%"></canvas>
+</div>
+</div>
+
+
+<footer>
+  <div style="width:100%;height:200px">
+    <div class="foot">
+      <div>
+        <p>&copy; Smart Study</p>
+      </div>
+      <div>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Use</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="{{ url_for('static', filename='scripts/app.js') }}"></script>
+ </body>
+  <script>
+  var xValues = ["Computers", "Physics", "Mathematics", "Biology", "Chemistry"];
+  var yValues = [70, 29, 49, 24, 15];
+  var barColors = [
+    "#b91d47",
+    "#00aba9",
+    "#2b5797",
+    "#e8c3b9",
+    "#1e7145"
+  ];
+  
+  new Chart("myChart", {
+    type: "pie",
+    data: {
+      labels: xValues,
+      datasets: [{
+        backgroundColor: barColors,
+        data: yValues
+      }]
+    },
+    options: {
+      title: {
+        display: true,
+        text: "Percentage of Students taking Courses"
+      }
+    }
+  });
+  </script> 
+</html>
+

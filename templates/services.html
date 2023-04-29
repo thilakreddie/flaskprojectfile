@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/services-css.css') }}">
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <a href="/" class="logo"><img src="{{ url_for('static', filename='img/logo.jpeg') }}" width="180px"
+        height="50px"></a>
+    <div class="header-right">
+      <a href="/">Home</a>
+      <a class="active" href="/services">Our Services</a>
+      <a href="/about">About us</a>
+      <a href="/registration"> Get Started</a>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="row">
+    <div class="column">
+      <div class="card">
+        <img src="{{ url_for('static', filename='img/R.jpg') }}" alt="Algebra" style="width:100%;height:300px">
+        <div class="container">
+          <h2>{{courses[0][1]}}</h2><br>
+          <p class="title">{{courses[0][2]}} </p><br>
+          <p>Prerequisites: {{courses[0][4]}}</p><br>
+          <p>Instructor: {{courses[0][3]}}</p><br>
+          <p><button class="button">Contact the tutor</button></p><br>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="row"> -->
+    <div class="column">
+      <div class="card">
+        <img src="{{ url_for('static', filename='img/computer.jpg') }}" alt="Algebra" style="width:100%;height:300px">
+        <div class="container">
+          <h2>{{courses[1][1]}}</h2><br>
+          <p class="title">{{courses[1][2]}}</p> <br>
+          <p>Prerequisites: {{courses[1][4]}}</p><br>
+          <p>Instructor: {{courses[1][3]}}</p><br>
+          <p><button class="button">Contact the tutor</button></p><br>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="row"> -->
+    <div class="column">
+      <div class="card">
+        <img src="{{ url_for('static', filename='img/Science.jpg') }}" alt="Algebra" style="width:100%;height:300px">
+        <div class="container">
+          <h2>{{courses[2][1]}}</h2><br>
+          <p class="title"> {{courses[2][2]}} </p><br>
+          <p>Prerequisites: {{courses[2][4]}}</p><br>
+          <p>Instructor: {{courses[2][3]}}</p><br>
+          <p><button class="button">Contact the tutor</button></p><br>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="row"> -->
+    <div class="column">
+      <div class="card">
+        <img src="{{ url_for('static', filename='img/sci2.webp') }}" alt="Algebra" style="width:100%;height:300px">
+        <div class="container">
+          <h2>{{courses[3][1]}}</h2><br>
+          <p class="title"> {{courses[3][2]}} </p><br>
+          <p>Prerequisites: {{courses[3][4]}}</p><br>
+          <p>Instructor: {{courses[3][3]}}</p><br>
+          <p><button class="button">Contact the tutor</button></p><br>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="row"> -->
+    <div class="column">
+      <div class="card">
+        <img src="{{ url_for('static', filename='img/biology.webp') }}" alt="Algebra" style="width:100%;height:300px">
+        <div class="container">
+          <h2>{{courses[4][1]}}</h2><br>
+          <p class="title"> {{courses[4][2]}} </p><br>
+          <p>Prerequisites: {{courses[4][4]}}</p><br>
+          <p>Instructor: {{courses[4][3]}}</p><br>
+          <p><button class="button">Contact the tutor</button></p><br>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="row"> -->
+    <div class="column">
+      <div class="card">
+        <img src="{{ url_for('static', filename='img/chemistry.jpg') }}" alt="Algebra" style="width:100%;height:300px">
+        <div class="container">
+          <h2>{{courses[5][1]}}</h2><br>
+          <p class="title"> {{courses[5][2]}} </p><br>
+          <p>Prerequisites: {{courses[5][4]}}</p><br>
+          <p>Instructor: {{courses[5][3]}}</p><br>
+          <p><button class="button">Contact the tutor</button></p><br>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="column">
+    <div class="card">
+      <img src="/w3images/team2.jpg" alt="Mike" style="width:100%">
+      <div class="container">
+        <h2>Mike Ross</h2>
+        <p class="title">Art Director</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>mike@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <img src="/w3images/team3.jpg" alt="John" style="width:100%">
+      <div class="container">
+        <h2>John Doe</h2>
+        <p class="title">Designer</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>john@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div> -->
+  </div>
+  <footer>
+    <div style="width:100%;height:200px">
+      <div class="foot">
+        <div>
+          <p>&copy; Smart Study</p>
+        </div>
+        <div>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
